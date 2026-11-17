@@ -1,0 +1,8 @@
+{
+  "id": "esempio-estensione",
+  "name": "Estensione di esempio",
+  "description": "Pacchetto dimostrativo per verificare installazione e menu plugin.",
+  "version": "1.0.0",
+  "min_cms_version": "1.0.0-rc1",
+  "entry": "plugin.php"
+}

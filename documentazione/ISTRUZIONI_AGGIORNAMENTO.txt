@@ -1,0 +1,28 @@
+MERCURIOCMS 1.0.0 — ISTRUZIONI AGGIORNAMENTO
+
+PRIMA DI INIZIARE
+- Effettuare un backup esterno completo di file e database dal pannello hosting o dagli strumenti del database.
+- Verificare spazio libero e limiti PHP di caricamento (il limite applicativo del CMS è 50 MB).
+- Non avviare aggiornamenti durante modifiche ai contenuti o altre operazioni amministrative.
+
+DA MERCURIOCMS 0.9.9
+La versione 0.9.9 non dispone della pagina Aggiornamenti CMS. Installare prima il bridge fornito per aggiungere admin/updates.php e la relativa voce di menu, seguendo le istruzioni del bridge. Dopo il bridge, accedere con l’amministratore principale e caricare il pacchetto cumulativo 0.9.9 → 1.0.0. Il pacchetto cumulativo contiene le modifiche dalla RC12 alla RC21-rev1 e non richiede l’applicazione manuale delle singole RC.
+
+DA VERSIONI 1.0.0-RC
+Usare il pacchetto cumulativo solo se la versione installata è ammessa dal campo min_version del pacchetto. Per questa build il punto di partenza documentato è 0.9.9 con bridge già installato. Non caricare pacchetti incrementali in ordine casuale.
+
+PROCEDURA
+1. Accedere come amministratore principale.
+2. Aprire Aggiornamenti CMS.
+3. Selezionare il pacchetto ZIP cumulativo compatibile.
+4. Premere Verifica e applica aggiornamento e attendere il completamento.
+5. Verificare dashboard, sito pubblico, editor, libreria media e menu.
+6. In Aggiornamenti verificare la presenza del backup creato prima dell’aggiornamento e, se necessario, creare un punto protetto dello stato appena aggiornato.
+
+BACKUP E RIPRISTINO
+I backup nuovi contengono copie dei file di programma e dump SQL delle tabelle con il prefisso configurato, oltre a un manifesto SHA-256. Prima del ripristino il sistema verifica inventario e hash. I punti protetti non scadono e non vengono eliminati dalla pulizia automatica. La pulizia conserva gli ultimi 5 backup automatici non protetti e rimuove i backup di sicurezza non protetti più vecchi di 7 giorni. I backup precedenti privi di manifesto sono verificabili solo strutturalmente.
+
+La procedura crea un backup di sicurezza prima del ripristino. File di configurazione, uploads, storage e plugins sono preservati secondo le regole del ripristino. Conservare comunque il backup esterno: nessun backup interno sostituisce una copia indipendente.
+
+REQUISITI E LIMITI
+La cartella storage/ deve essere scrivibile. Il lettore ZIP usa ZipArchive oppure il lettore integrato per ZIP classici non cifrati STORE/DEFLATE con zlib. I limiti del server PHP possono essere inferiori a quelli del CMS.

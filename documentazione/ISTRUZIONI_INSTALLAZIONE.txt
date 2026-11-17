@@ -1,0 +1,36 @@
+MERCURIOCMS 1.0.0
+
+Guida per installare una nuova copia di MercurioCMS 1.0.0.
+
+REQUISITI DEL SERVER
+PHP 8.2 o superiore; MySQL 5.7 o MariaDB compatibile; PDO e PDO MySQL, JSON, Fileinfo e Iconv; Apache con supporto .htaccess oppure regole equivalenti sul server utilizzato.
+La cartella dell’installazione deve poter creare config.php durante l’installazione. Le cartelle storage/, uploads/ e plugins/ devono avere permessi di scrittura per le rispettive funzioni. Per la libreria media prevedere almeno 10 MB per file; per gli aggiornamenti il limite applicativo è 50 MB, salvo limiti PHP più restrittivi.
+Per i pacchetti ZIP il CMS utilizza ZipArchive quando disponibile oppure il lettore integrato per archivi classici non cifrati STORE/DEFLATE con zlib. ZIP64 e archivi cifrati richiedono ZipArchive.
+
+PREPARAZIONE
+- Scaricare e conservare una copia integra del pacchetto ZIP.
+- Creare un database MySQL/MariaDB e un utente con i privilegi necessari.
+- Scegliere un prefisso tabelle esclusivo (lettere, numeri e underscore; massimo 20 caratteri).
+- Estrarre l’archivio: al suo interno è presente la cartella mercuriocms.
+- Copiare la cartella nella directory pubblica del sito, tramite FTP o File Manager.
+
+INSTALLAZIONE GUIDATA
+- Aprire nel browser https://dominio/percorso/mercuriocms/install.php.
+- Inserire host, nome database, utente, password e prefisso tabelle.
+- Creare il primo amministratore con nome utente, email e password di almeno 9 caratteri. Usare una password lunga, unica e non riutilizzata.
+- Completare l’installazione e accedere a /admin/.
+- Seguire la configurazione iniziale: identità, logo e favicon, colori, modulo Pagine, prima categoria, pagina di prova e riepilogo.
+- Aprire il sito pubblico e verificare menu, homepage e contenuti.
+
+DOPO L’INSTALLAZIONE
+La pagina di prova viene creata come bozza. Modificarla, pubblicarla o eliminarla prima di rendere pubblico il sito. Rimuovere o rinominare install.php dopo aver verificato l’accesso; non eliminare config.php, storage/ o storage/install.lock.
+Attivare HTTPS, verificare le protezioni delle cartelle uploads/, storage/ e plugins/, e creare subito una copia di sicurezza esterna di file e database. Non condividere config.php: contiene credenziali riservate.
+
+INSTALLAZIONI INDIPENDENTI
+Per gestire più siti, usare directory separate e prefissi database distinti. È possibile condividere lo stesso database solo se ogni installazione utilizza un prefisso esclusivo.
+
+SERVER DIVERSI DA APACHE
+Il pacchetto include regole .htaccess per Apache. Su IIS o altri server configurare regole equivalenti per proteggere config.php e storage/ e impedire l’esecuzione di script nelle cartelle di caricamento.
+
+AGGIORNAMENTO DA UNA VERSIONE PRECEDENTE
+Per una copia 0.9.9 occorre prima installare il bridge che aggiunge la pagina Aggiornamenti CMS; successivamente si può caricare il pacchetto cumulativo 0.9.9 → 1.0.0. Per installazioni già dotate della pagina Aggiornamenti CMS, usare il pacchetto cumulativo compatibile con la versione di partenza. Prima di ogni aggiornamento creare anche un backup esterno dal pannello hosting.

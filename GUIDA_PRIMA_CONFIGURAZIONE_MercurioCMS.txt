@@ -1,0 +1,43 @@
+MERCURIOCMS 1.0.0
+
+La procedura guidata accompagna il primo amministratore nella preparazione del sito. Le impostazioni possono essere modificate successivamente dal pannello.
+
+I SETTE PASSAGGI
+
+1. Identità del sito
+Impostare il nome del sito e la descrizione breve. I campi descrittivi possono essere lasciati vuoti.
+
+2. Logo e favicon
+Caricare separatamente il logo e la favicon. È possibile saltare il passaggio e completarlo in seguito da Impostazioni.
+
+3. Aspetto e colori
+Personalizzare colori generali, intestazione, menu e area introduttiva. Usare le anteprime per controllare contrasto e leggibilità. I colori originali possono essere ripristinati.
+
+4. Modulo Pagine e Categorie
+Attivare il modulo editoriale che abilita la gestione delle pagine e delle categorie e prepara le relative tabelle.
+
+5. Prima categoria
+Creare almeno una categoria. Le categorie visibili alimentano il menu superiore.
+
+6. Pagina di prova
+Creare una pagina associata alla categoria iniziale. Viene salvata come bozza e non è visibile ai visitatori.
+
+7. Riepilogo
+Controllare le impostazioni e completare la procedura.
+
+STRUTTURA EDITORIALE
+MercurioCMS mantiene una struttura essenziale: Pagine e Categorie. La homepage automatica mostra le pagine pubblicate in ordine cronologico per data di aggiornamento. In Impostazioni si può scegliere una pagina pubblicata da usare direttamente come homepage.
+Una categoria può mostrare l’elenco delle pagine associate oppure aprire direttamente una pagina pubblicata scelta nelle impostazioni della categoria. Una categoria può essere nascosta dal menu senza eliminare la categoria o i contenuti. L’ordine delle categorie è modificabile.
+
+DOPO LA CONFIGURAZIONE
+- Aprire Pagine e modificare o eliminare la pagina di prova.
+- Creare le categorie e le pagine effettive.
+- Controllare collegamenti, immagini, documenti e visualizzazione da smartphone.
+- Impostare logo, favicon, colori e homepage definitiva.
+- Creare e verificare un backup completo di file e database.
+
+AMMINISTRAZIONE
+La barra laterale raccoglie le funzioni amministrative: dashboard, pagine, categorie, impostazioni, libreria media, cestino, estensioni, profilo e amministratori, aggiornamenti e accesso al sito pubblico. Alcune voci dipendono dal modulo installato e dal ruolo dell’account.
+
+PRIMA DELLA PUBBLICAZIONE
+Non pubblicare testi segnaposto. Verificare i contenuti legali e le informative privacy/cookie in base agli strumenti effettivamente utilizzati: il CMS non garantisce automaticamente la conformità normativa.

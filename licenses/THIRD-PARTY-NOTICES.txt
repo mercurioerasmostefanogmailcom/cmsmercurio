@@ -1,0 +1,12 @@
+AVVISI SULLE LIBRERIE DI TERZE PARTI
+
+MercurioCMS include le seguenti librerie JavaScript:
+
+1. Summernote Lite 0.9.1 - Copyright (c) 2015~ Summernote Team - licenza MIT.
+   Il testo integrale della licenza è in SUMMERNOTE-MIT.txt.
+
+2. jQuery 3.6.0 - Copyright OpenJS Foundation e altri contributori - licenza MIT.
+   Il testo della licenza è in JQUERY-MIT.txt.
+
+Queste librerie sono incluse nel pacchetto in forma locale. I rispettivi avvisi
+copyright e licenze devono essere conservati in caso di redistribuzione.

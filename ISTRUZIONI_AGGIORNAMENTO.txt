@@ -1,0 +1,15 @@
+MERCURIOCMS 1.0.0 — ISTRUZIONI AGGIORNAMENTO
+
+PRIMA DI INIZIARE
+- Eseguire un backup esterno completo di file e database.
+- Verificare che storage/ sia scrivibile e che il server consenta upload ZIP fino a 50 MB.
+- Non aggiornare durante modifiche ai contenuti.
+
+DA MERCURIOCMS 0.9.9
+La versione 0.9.9 non dispone della pagina Aggiornamenti CMS. Installare prima il Bridge 0.9.9 per aggiungere la funzione di aggiornamento. Quindi accedere come amministratore principale e caricare il pacchetto cumulativo 0.9.9 → 1.0.0.
+
+DA VERSIONI RC 1.0.0
+Non applicare pacchetti RC in ordine casuale. Il pacchetto cumulativo è destinato al percorso di aggiornamento 0.9.9 con Bridge; per installazioni RC usare il meccanismo di aggiornamento solo se la versione dichiarata nel pacchetto è compatibile con quella installata. In caso di dubbio, eseguire prima un backup esterno completo.
+
+DOPO L'AGGIORNAMENTO
+Verificare accesso /admin/, dashboard, sito pubblico, editor, libreria media, gestione estensioni, secondo amministratore e backup/ripristino. Le cartelle operative mancanti vengono ricreate dal bootstrap.

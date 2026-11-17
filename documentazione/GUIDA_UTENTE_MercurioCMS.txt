@@ -1,0 +1,52 @@
+MERCURIOCMS 1.0.0
+
+Manuale operativo per la gestione quotidiana del sito.
+
+ACCESSO E DASHBOARD
+Aprire /admin/ e autenticarsi con le credenziali dell’amministratore. Usare HTTPS e una password lunga e unica. La dashboard e il menu laterale consentono di raggiungere le funzioni disponibili per il proprio ruolo.
+
+PAGINE E CATEGORIE
+Il CMS gestisce esclusivamente due elementi editoriali: Pagine e Categorie. Le categorie alimentano il menu pubblico; le pagine costituiscono i contenuti. La homepage automatica elenca le pagine pubblicate in ordine cronologico per data di aggiornamento, dalla più recente.
+
+CREARE E MODIFICARE CATEGORIE
+- Aprire Categorie e creare una nuova voce indicando il nome.
+- Modificare il nome o scegliere una pagina pubblicata da aprire direttamente quando il visitatore seleziona la categoria.
+- Usare Sposta su e Sposta giù per cambiare l’ordine del menu.
+- Usare Nascondi dal menu per non mostrare la categoria senza eliminarla.
+Se non è impostata una pagina di destinazione, la categoria mostra l’elenco delle pagine associate.
+
+CREARE E MODIFICARE PAGINE
+- Aprire Pagine e scegliere Nuova pagina.
+- Inserire il titolo e controllare lo slug, generato automaticamente o personalizzato.
+- Aggiungere un riassunto facoltativo, il contenuto, l’immagine di sfondo se desiderata e le categorie associate.
+- Scegliere lo stato e salvare.
+Gli stati disponibili sono Bozza (non visibile), Pubblicata (visibile negli elenchi pubblici) e Pubblicata ma nascosta (non compare negli elenchi, ma resta raggiungibile tramite collegamento diretto).
+La pagina può essere duplicata come nuova bozza indicando un nuovo titolo. La copia riceve uno slug univoco e mantiene le impostazioni editoriali previste dal duplicatore.
+
+EDITOR DEI CONTENUTI
+L’editor integra Summernote e offre modalità visuale, codice HTML e anteprima. La barra aggiuntiva contiene strumenti per le tabelle e le operazioni avanzate; la disponibilità delle singole azioni dipende dal contesto e dalla selezione.
+Sono disponibili formattazione del testo, titoli, elenchi, citazioni, collegamenti, rimozione link, pulizia formattazione, inserimento di tabelle con righe/colonne e intestazione, immagini e documenti dalla libreria. Il codice HTML viene presentato con indentazione. Le immagini possono essere ridimensionate tramite percentuali predefinite dal 10% al 100%.
+Usare Anteprima prima del salvataggio. Il server filtra il markup non consentito. Se si lascia l’editor con modifiche non salvate, il browser può proporre il recupero di una bozza locale.
+
+LIBRERIA MEDIA
+La libreria gestisce immagini JPG/JPEG, PNG, GIF e WEBP e documenti PDF, TXT, DOC, DOCX, XLS, XLSX, PPT e PPTX. Il limite applicativo è 10 MB per file, soggetto ai limiti PHP del server. PDF e TXT possono aprirsi nel browser; i documenti Office normalmente vengono scaricati.
+Le immagini possono essere inserite nel contenuto e usate come sfondo pagina. I documenti vengono inseriti come collegamenti. I file eliminati passano nel Cestino e possono essere ripristinati finché non vengono cancellati definitivamente.
+
+CESTINO E REVISIONI
+Il Cestino raccoglie pagine, immagini e documenti eliminati. Ripristinare un elemento per renderlo nuovamente disponibile oppure eliminarlo definitivamente. Quando una pagina esistente viene modificata, il CMS conserva le revisioni precedenti; la cronologia permette di ripristinare una versione conservata e mantiene un limite alle revisioni per pagina.
+
+IMPOSTAZIONI E AMMINISTRATORI
+Da Impostazioni modificare nome, descrizione, logo, favicon, colori, testi introduttivi e homepage. Etichetta e titolo introduttivi possono essere lasciati vuoti. Dalla sezione Profilo e amministratori aggiornare i dati personali e gestire il secondo amministratore secondo le opzioni disponibili. L’amministratore principale è protetto.
+
+ESTENSIONI
+Da Gestione estensioni caricare un pacchetto ZIP con manifest plugin.json. L’estensione viene installata disattivata; attivarla solo se proviene da una fonte fidata. Disattivare interrompe il caricamento ma conserva i file; disinstallare rimuove il record e la cartella dell’estensione.
+Le estensioni sono codice PHP eseguibile con i permessi del sito: non sono isolate in una sandbox. Installare esclusivamente pacchetti fidati. Il lettore integrato gestisce ZIP classici non cifrati STORE/DEFLATE; ZIP64 e archivi cifrati richiedono ZipArchive.
+
+AGGIORNAMENTI, BACKUP E RIPRISTINO
+La pagina Aggiornamenti CMS è riservata all’amministratore principale. Prima di sostituire i file viene creato un backup completo dei file di programma e del database del prefisso configurato. I backup sono copie indipendenti: eliminarne uno non invalida gli altri.
+La schermata separa punti protetti, backup automatici degli aggiornamenti e backup di sicurezza. La pulizia automatica conserva gli ultimi 5 backup automatici non protetti e rimuove i backup di sicurezza non protetti più vecchi di 7 giorni. I punti protetti non scadono e non vengono rimossi dalla pulizia automatica; almeno un punto protetto deve restare disponibile.
+Ogni nuovo backup include un manifesto SHA-256 dei file e del database, verificato prima del ripristino. I backup creati da versioni precedenti e privi di manifesto possono essere sottoposti soltanto a controlli strutturali. Prima del ripristino viene creato un backup di sicurezza della situazione corrente. Il ripristino riallinea i file del programma e le tabelle del prefisso CMS al punto selezionato; configurazione, uploads, storage e plugins sono preservati secondo le regole della procedura.
+Conservare comunque una copia esterna indipendente di file e database prima di aggiornamenti importanti. Non cancellare manualmente cartelle o file di backup mentre un ripristino è in corso.
+
+SICUREZZA ESSENZIALE
+Non condividere config.php; non lasciare install.php accessibile dopo l’installazione; mantenere aggiornati PHP e database; usare HTTPS; limitare i permessi di scrittura; verificare la provenienza delle estensioni; effettuare backup esterni periodici. Su server non Apache applicare protezioni equivalenti alle regole .htaccess incluse.

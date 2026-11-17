@@ -1,0 +1,19 @@
+MERCURIOCMS 1.0.0 — ISTRUZIONI INSTALLAZIONE
+
+INSTALLAZIONE NUOVA
+1. Estrarre il contenuto della cartella mercuriocms nella directory pubblica scelta sul server.
+2. Verificare che PHP possa scrivere nella directory dell'installazione durante la configurazione e nelle cartelle storage, plugins e uploads.
+3. Aprire /install.php e completare la procedura guidata con i dati del database e dell'amministratore principale.
+4. Accedere da /admin/; il percorso mostra la pagina di accesso e, dopo l'autenticazione, apre la dashboard.
+5. Completare la configurazione guidata, creare almeno una categoria e una pagina di prova.
+
+REQUISITI
+- PHP 8.1 o superiore consigliato; estensioni PDO MySQL, JSON, Fileinfo e zlib. ZipArchive è consigliato per la gestione dei pacchetti ZIP.
+- MySQL 5.7+ o MariaDB 10.3+.
+- HTTPS consigliato e credenziali database dedicate.
+
+CARTELLE OPERATIVE
+storage/, storage/update-backups/, plugins/, uploads/, uploads/images/ e uploads/documents/ vengono create automaticamente quando necessario. Il processo PHP deve poter scrivere nelle cartelle operative.
+
+SICUREZZA
+Dopo l'installazione, conservare una copia esterna di file e database. Non rendere pubblicamente accessibili config.php o i backup. Installare estensioni ZIP soltanto da fonti fidate.

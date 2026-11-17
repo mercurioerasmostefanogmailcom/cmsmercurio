@@ -1,0 +1,40 @@
+:root{--green:#245b45;--green-dark:#173f31;--bg:#f3f6f4;--line:#dce5df;--text:#24332b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,-apple-system,"Segoe UI",sans-serif}.site-shell{width:min(1080px,calc(100% - 36px));margin:0 auto}.site-header{background:var(--green-dark);color:#fff}.header-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:1.25rem;font-weight:750;color:#fff;text-decoration:none}.site-header nav{display:flex;gap:18px;flex-wrap:wrap}.site-header nav a{color:#fff;text-decoration:none}.site-header nav a:hover{text-decoration:underline}.hero{padding:52px 0 28px}.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.15;margin:0 0 12px;color:var(--green-dark)}.hero p{margin:0}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:700;color:var(--green)}.page-list{padding:14px 0 50px}.page-list h2{color:var(--green-dark)}.page-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.page-card,.site-panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px;box-shadow:0 3px 12px #173f310c}.page-card h3{margin:0 0 8px;font-size:1.25rem}.page-card h3 a,.read-more{color:var(--green-dark)}.page-card p{margin:0 0 12px}.read-more{font-weight:650}.site-panel{margin:36px auto;padding:clamp(20px,4vw,38px)}.site-panel h1{margin-top:0;color:var(--green-dark);line-height:1.2}.breadcrumbs{font-size:.9rem;color:#65746b}.breadcrumbs a{color:var(--green)}.page-content{overflow-wrap:anywhere}.page-content img{max-width:100%;height:auto}.page-content blockquote{border-left:4px solid var(--green);margin:1.2em 0;padding:8px 18px;background:#f5f8f6}.empty-state{padding:18px;background:#fff;border:1px dashed #bdcbc2;border-radius:8px}.site-footer{background:#e7eee9;padding:24px 0;color:#53645a;font-size:.9rem}.site-button{display:inline-block;background:var(--green);color:white;padding:10px 16px;border-radius:7px;text-decoration:none}
+@media(max-width:700px){.header-inner{align-items:flex-start;flex-direction:column;padding:14px 0}.site-header nav{gap:10px 15px}.page-grid{grid-template-columns:1fr}.hero{padding-top:36px}}
+
+/* MercurioCMS 0.5.0 - temi personalizzabili */
+body{background:var(--site-bg,#f3f6f4);color:var(--site-text,#24332b)}
+a{color:var(--primary,#245b45)}
+.site-header{background:var(--surface,#fff);border-bottom:1px solid color-mix(in srgb,var(--site-text,#24332b) 12%,transparent)}
+.site-header .brand{color:var(--site-text,#24332b);display:inline-flex;align-items:center;gap:10px}
+.site-header .brand img{max-width:180px;max-height:58px;object-fit:contain}
+.site-header nav a{color:var(--site-text,#24332b)}
+.site-panel,.page-card{background:var(--surface,#fff);color:var(--site-text,#24332b)}
+.site-footer{background:var(--footer-bg,#173f31);color:var(--footer-text,#fff)}
+.site-footer a{color:var(--footer-text,#fff)}
+.site-button{background:var(--primary,#245b45)}.read-more{color:var(--primary,#245b45);background:transparent}
+
+/* MercurioCMS 0.8.0 - colori indipendenti dell'header */
+.site-header{background:var(--header-bg,#173f31);color:var(--header-text,#fff)}
+.site-header .brand,.site-header nav a{color:var(--header-text,#fff)}
+.site-header{border-bottom-color:color-mix(in srgb,var(--header-text,#fff) 18%,transparent)}
+.page-content img{display:block;margin:1em auto;border-radius:6px}
+
+/* MercurioCMS 0.8.1 - personalizzazione colori della testata introduttiva */
+.hero{background:var(--hero-bg,#f3f6f4);padding:36px 28px 30px;border-radius:12px;margin-top:28px}
+.hero .eyebrow{color:var(--hero-eyebrow,#245b45)}
+.hero h1{color:var(--hero-title,#173f31)}
+.hero>p:not(.eyebrow){color:var(--hero-text,#24332b)}
+
+/* MercurioCMS 0.9.3 - sfondo pagina e immagini ridimensionabili */
+.page-panel{background-image:linear-gradient(#ffffffdf,#ffffffdf),var(--page-background);background-size:cover;background-position:center;background-repeat:no-repeat}.page-content img{max-width:100%;height:auto}
+
+/* MercurioCMS 0.9.4 - immagini di sfondo nelle schede dell'indice */
+.page-card{background-size:cover;background-position:center;background-repeat:no-repeat}
+
+/* Tabelle create nell'editor visuale */
+.page-content table{width:100%;border-collapse:collapse;margin:1.2em 0;table-layout:auto}
+.page-content th,.page-content td{border:1px solid var(--line,#dce5df);padding:9px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+.page-content th{background:color-mix(in srgb,var(--primary,#245b45) 10%,white);font-weight:700}
+.page-content td img,.page-content th img{max-width:100%;height:auto}
+@media(max-width:600px){.page-content table{font-size:.92rem}.page-content th,.page-content td{padding:6px}}

@@ -1,0 +1,7 @@
+MERCURIOCMS 1.0.0 — RAPPORTO DI VERIFICA
+
+Verifica statica: superata. Archivi ZIP e manifest SHA-256: superati. Sintassi PHP: 22 file controllati con PHP 8.4.24, zero errori. Sintassi JavaScript: superata.
+
+Non eseguiti in questo ambiente: installazione reale con MySQL/MariaDB, migrazioni database, prove browser Apache, upload media, gestione estensioni e ripristino completo. Questi test devono essere completati nell’ambiente di destinazione prima della distribuzione pubblica.
+
+La build deriva dal cumulativo 0.9.9→RC12 e dalla sequenza RC12→RC13→RC14→RC15→RC16→RC17→RC18→RC19→RC20→RC21→RC21-rev1. Tutti gli hash dichiarati nei manifest sono stati verificati.

@@ -1,0 +1,12 @@
+MERCURIOCMS 1.0.0 — VERIFICA TECNICA DEL PACCHETTO
+
+Controlli eseguiti in preparazione della release:
+- Sintassi PHP: controllo php -l su tutti i 22 file PHP inclusi nella build, senza errori.
+- Verifica statica dei percorsi amministrativi e ripristino del vero endpoint di login in admin/index.php.
+- Verifica statica delle operazioni SQL per le opzioni hide_title e hide_category e della migrazione non distruttiva delle colonne.
+- Verifica statica della protezione da scandir() su storage/update-backups inesistente.
+- Verifica statica della creazione automatica delle cartelle operative e dei file di protezione.
+- Verifica statica dell'attivazione/disattivazione del secondo amministratore e del blocco delle sessioni già aperte quando l'account viene disattivato.
+
+LIMITI DELLA VERIFICA
+Non è stata eseguita una prova end-to-end su un server web collegato a un database MySQL reale. Prima di considerare la release collaudata nell'ambiente di produzione, verificare installazione pulita, aggiornamento da 0.9.9 con Bridge, login, dashboard, salvataggio pagina, opzioni pubbliche, gestione secondo amministratore e creazione/ripristino backup.
